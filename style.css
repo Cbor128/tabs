@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  color: black;
+  background: lightgray;
+}
+
+h1 {
+  padding: 50px;
+}
+
+p {
+  font-weight: 600;
+}
+
+section {
+  display: none;
+}
+
+/* Selector #1  */
+div.tabComponent input {
+  display: none;
+}
+
+/* Selector #2  */
+div.tabComponent label {
+  display: inline-block;
+  margin: 1px;
+  padding: 15px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+
+
+input:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid black;
+  border-bottom: 1px solid #fff;
+}
+
+input[type="radio"]{
+  visibility: hidden;
+}
+
+#tab1:checked ~ #p1,
+#tab2:checked ~ #p2,
+#tab3:checked ~ #p3,
+#tab4:checked ~ #p4 {
+  display: block;
+}
